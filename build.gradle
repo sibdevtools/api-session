@@ -1,10 +1,11 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'com.github.sibmaks'
 version = '0.0.1'
-sourceCompatibility = '17'
+sourceCompatibility = jdk_version
 
 configurations {
     compileOnly {
@@ -27,4 +28,28 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/sibmaks/mad-session-api"
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
