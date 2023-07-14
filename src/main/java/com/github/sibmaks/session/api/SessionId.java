@@ -43,7 +43,7 @@ public interface SessionId {
      * @param version session version
      * @return session identifier
      */
-    default SessionId of(String uid, long version) {
+    static SessionId of(String uid, long version) {
         return new SessionIdImpl(uid, version);
     }
 }
