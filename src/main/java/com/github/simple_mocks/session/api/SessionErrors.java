@@ -21,7 +21,11 @@ public enum SessionErrors implements ServiceError {
     /**
      * Attribute already exists in the section
      */
-    ALREADY_EXISTS;
+    ALREADY_EXISTS,
+    /**
+     * Unexpected service error
+     */
+    UNEXPECTED_ERROR;
 
 
     @Nonnull
