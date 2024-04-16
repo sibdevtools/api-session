@@ -1,11 +1,11 @@
-package com.github.sibmaks.session.api;
+package com.github.simple_mocks.session.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
  * @author sibmaks
- * @since 2023-04-22
+ * @since 0.0.1
  */
 @Getter
 @AllArgsConstructor

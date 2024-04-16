@@ -1,8 +1,8 @@
-package com.github.sibmaks.session.api;
+package com.github.simple_mocks.session.api;
 
 /**
  * @author sibmaks
- * @since 2023-04-22
+ * @since 0.0.1
  */
 public interface SessionId {
 
@@ -22,10 +22,10 @@ public interface SessionId {
 
     /**
      * Check is the session identifiers same or not.<br/>
-     * By default, session version should not affect checking.
+     * By default, a session version should not affect checking.
      *
      * @param sessionId session identifier
-     * @return true - session the same, false - othesrwise
+     * @return true - session the same, false - otherwise
      */
     default boolean same(SessionId sessionId) {
         if(sessionId == null) {

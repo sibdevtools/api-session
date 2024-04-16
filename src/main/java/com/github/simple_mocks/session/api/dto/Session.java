@@ -1,6 +1,6 @@
-package com.github.sibmaks.session.api.dto;
+package com.github.simple_mocks.session.api.dto;
 
-import com.github.sibmaks.session.api.SessionId;
+import com.github.simple_mocks.session.api.SessionId;
 
 import java.util.Set;
 
@@ -12,7 +12,7 @@ import java.util.Set;
  * - sections - set of section names created in session.
  *
  * @author sibmaks
- * @since 2023-04-12
+ * @since 0.0.1
  */
 public interface Session {
     /**
