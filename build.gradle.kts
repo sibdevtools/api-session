@@ -26,7 +26,7 @@ dependencies {
 
     implementation("jakarta.annotation", "jakarta.annotation-api", "${project.property("lib_annotation_api_version")}")
 
-    implementation("com.github.simple-mocks", "error-api", "${project.property("lib_error_api_version")}")
+    implementation("com.github.simple-mocks", "api-error", "${project.property("lib_api_error_version")}")
 
 }
 
@@ -75,7 +75,7 @@ publishing {
             from(components["java"])
             pom {
                 packaging = "jar"
-                url = "https://github.com/simple-mocks/session-api"
+                url = "https://github.com/simple-mocks/api-session"
 
                 licenses {
                     license {
@@ -85,9 +85,9 @@ publishing {
                 }
 
                 scm {
-                    connection.set("scm:https://github.com/simple-mocks/session-api.git")
+                    connection.set("scm:https://github.com/simple-mocks/api-session.git")
                     developerConnection.set("scm:git:ssh://github.com/sib-energy-craft")
-                    url.set("https://github.com/simple-mocks/session-api")
+                    url.set("https://github.com/simple-mocks/api-session")
                 }
 
                 developers {
@@ -112,7 +112,7 @@ publishing {
         }
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/simple-mocks/session-api")
+            url = uri("https://maven.pkg.github.com/simple-mocks/api-session")
             credentials {
                 username = project.findProperty("gpr.user")?.toString() ?: System.getenv("GITHUB_ACTOR")
                 password = project.findProperty("gpr.key")?.toString() ?: System.getenv("GITHUB_TOKEN")
