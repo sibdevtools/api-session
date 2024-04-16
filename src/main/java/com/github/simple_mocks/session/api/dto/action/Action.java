@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Getter
 @AllArgsConstructor
-public sealed class Action implements Serializable permits AddAction, DeleteAction, SetAction {
+public abstract sealed class Action implements Serializable permits AddAction, DeleteAction, SetAction {
     /**
      * The name of the section
      */
