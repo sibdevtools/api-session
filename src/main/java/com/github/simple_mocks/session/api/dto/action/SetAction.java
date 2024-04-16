@@ -18,16 +18,25 @@ public final class SetAction extends Action {
      * Attribute value to set
      */
     private final Serializable attributeValue;
+    /**
+     * Add attribute if it doesn't exist
+     */
+    private final boolean addIfNotExists;
 
     /**
      * Construct action for change attribute value in section
      *
-     * @param section        section code
-     * @param attributeName  attribute name
-     * @param attributeValue attribute value
+     * @param section           section code
+     * @param attributeName     attribute name
+     * @param attributeValue    attribute value
+     * @param createIfNotExists whether to add an attribute if it doesn't exist
      */
-    public SetAction(String section, String attributeName, Serializable attributeValue) {
+    public SetAction(String section,
+                     String attributeName,
+                     Serializable attributeValue,
+                     boolean createIfNotExists) {
         super(section, attributeName);
         this.attributeValue = attributeValue;
+        this.addIfNotExists = createIfNotExists;
     }
 }

@@ -70,7 +70,24 @@ public final class ModificationQueryBuilder {
     public <T extends Serializable> ModificationQueryBuilder change(@Nonnull String section,
                                                                     @Nonnull String attribute,
                                                                     T value) {
-        var action = new SetAction(section, attribute, value);
+        var action = new SetAction(section, attribute, value, false);
+        this.actions.add(action);
+        return this;
+    }
+
+    /**
+     * Add create or change attribute value action<br/>
+     *
+     * @param section   section in session
+     * @param attribute attribute code
+     * @param value     attribute value
+     * @param <T>       type of attribute
+     * @return self reference
+     */
+    public <T extends Serializable> ModificationQueryBuilder createOrChange(@Nonnull String section,
+                                                                            @Nonnull String attribute,
+                                                                            T value) {
+        var action = new SetAction(section, attribute, value, true);
         this.actions.add(action);
         return this;
     }
