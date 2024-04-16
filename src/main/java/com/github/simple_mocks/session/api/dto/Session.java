@@ -39,9 +39,16 @@ public interface Session {
     String getOwnerId();
 
     /**
-     * Session sections, that current service allow to access
+     * Session sections that current service allow to access
      *
      * @return set of sections
      */
     Set<String> getSections();
+
+    /**
+     * Session owner permission list.
+     *
+     * @return set of permissions
+     */
+    Set<String> getPermissions();
 }
