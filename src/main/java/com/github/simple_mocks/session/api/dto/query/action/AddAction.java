@@ -1,13 +1,12 @@
-package com.github.simple_mocks.session.api.dto.action;
+package com.github.simple_mocks.session.api.dto.query.action;
 
-import com.github.simple_mocks.session.api.SessionErrors;
 import lombok.Getter;
 
 import java.io.Serializable;
 
 /**
  * Action adds new attribute in session.<br/>
- * If attribute already exists in section when {@link SessionErrors#ALREADY_EXISTS} should be thrown.
+ * If attribute already exists in section when "ALREADY_EXISTS" should be thrown.
  *
  * @author sibmaks
  * @since 0.0.1

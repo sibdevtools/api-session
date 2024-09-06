@@ -1,7 +1,5 @@
 package com.github.simple_mocks.session.api.dto;
 
-import com.github.simple_mocks.session.api.SessionId;
-
 import java.util.Set;
 
 /**

@@ -1,10 +1,11 @@
 package com.github.simple_mocks.session.api;
 
-import com.github.simple_mocks.session.api.dto.action.Action;
-import com.github.simple_mocks.session.api.dto.action.AddAction;
-import com.github.simple_mocks.session.api.dto.action.DeleteAction;
-import com.github.simple_mocks.session.api.dto.action.SetAction;
-import com.github.simple_mocks.session.api.impl.ModificationQueryImpl;
+import com.github.simple_mocks.session.api.dto.query.action.Action;
+import com.github.simple_mocks.session.api.dto.query.action.AddAction;
+import com.github.simple_mocks.session.api.dto.query.action.DeleteAction;
+import com.github.simple_mocks.session.api.dto.query.action.SetAction;
+import com.github.simple_mocks.session.api.dto.query.impl.ModificationQueryImpl;
+import com.github.simple_mocks.session.api.dto.query.ModificationQuery;
 import jakarta.annotation.Nonnull;
 
 import java.io.Serializable;
@@ -13,6 +14,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Modifiable query builder.
+ *
  * @author sibmaks
  * @since 0.0.6
  */

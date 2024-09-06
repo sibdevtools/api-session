@@ -1,4 +1,4 @@
-package com.github.simple_mocks.session.api.dto.action;
+package com.github.simple_mocks.session.api.dto.query.action;
 
 /**
  * Action delete attribute from session.<br/>

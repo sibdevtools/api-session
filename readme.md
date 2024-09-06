@@ -1,4 +1,4 @@
-# Simple Mock - Session API
+# Simple Mock - Session Service API
 
 ## To build
 

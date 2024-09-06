@@ -1,5 +1,7 @@
-package com.github.simple_mocks.session.api;
+package com.github.simple_mocks.session.api.service;
 
+import com.github.simple_mocks.session.api.dto.query.ModificationQuery;
+import com.github.simple_mocks.session.api.dto.SessionId;
 import com.github.simple_mocks.session.api.dto.Session;
 import com.github.simple_mocks.session.api.dto.SessionOwnerType;
 import jakarta.annotation.Nonnull;
@@ -10,6 +12,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * Session service, provide ability to get, create, update session.
+ *
  * @author sibmaks
  * @since 0.0.1
  */
@@ -36,7 +40,7 @@ public interface SessionService {
     /**
      * Get attribute names from session's section.<br/>
      * In case if a section doesn't exist when null should be returned.<br/>
-     * If session isn't found when {@link SessionErrors#NOT_EXISTS} should be thrown.
+     * If session isn't found when "NOT_EXISTS" should be thrown.
      *
      * @param sessionId session identifier
      * @param section   section in session
@@ -48,7 +52,7 @@ public interface SessionService {
     /**
      * Get attribute value from session.<br/>
      * In case if a section or attribute is not found, null should be returned.
-     * If session isn't found when {@link SessionErrors#NOT_EXISTS} should be thrown.
+     * If session isn't found when "NOT_EXISTS" should be thrown.
      *
      * @param sessionId session identifier
      * @param section   section in session
@@ -77,8 +81,8 @@ public interface SessionService {
     /**
      * Update session by applying passed actions.<br/>
      * Method should apply actions transitionally, in case if some action can't be applied session state should be reset.<br/>
-     * If session isn't found when {@link SessionErrors#NOT_EXISTS} should be thrown.<br/>
-     * If any of sections are readonly when {@link SessionErrors#READONLY} should be thrown.
+     * If session isn't found when "NOT_EXISTS" should be thrown.<br/>
+     * If any of the sections are readonly when "READONLY" should be thrown.
      *
      * @param sessionId         session id
      * @param modificationQuery query to modify session

@@ -1,10 +1,12 @@
-package com.github.simple_mocks.session.api;
+package com.github.simple_mocks.session.api.dto.query;
 
-import com.github.simple_mocks.session.api.dto.action.Action;
+import com.github.simple_mocks.session.api.dto.query.action.Action;
 
 import java.util.List;
 
 /**
+ * Query for session modification
+ *
  * @author sibmaks
  * @since 0.0.6
  */

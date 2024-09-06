@@ -1,6 +1,8 @@
-package com.github.simple_mocks.session.api;
+package com.github.simple_mocks.session.api.dto;
 
 /**
+ * Session identifier
+ *
  * @author sibmaks
  * @since 0.0.1
  */
@@ -28,7 +30,7 @@ public interface SessionId {
      * @return true - session the same, false - otherwise
      */
     default boolean same(SessionId sessionId) {
-        if(sessionId == null) {
+        if (sessionId == null) {
             return false;
         }
         var uid = getUID();
@@ -39,7 +41,7 @@ public interface SessionId {
     /**
      * Create default instance of session id
      *
-     * @param uid session uid
+     * @param uid     session uid
      * @param version session version
      * @return session identifier
      */
