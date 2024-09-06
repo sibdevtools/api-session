@@ -1,14 +1,14 @@
 package com.github.simple_mocks.session.api.service;
 
-import com.github.simple_mocks.session.api.dto.query.ModificationQuery;
-import com.github.simple_mocks.session.api.dto.SessionId;
 import com.github.simple_mocks.session.api.dto.Session;
-import com.github.simple_mocks.session.api.dto.SessionOwnerType;
+import com.github.simple_mocks.session.api.dto.SessionId;
+import com.github.simple_mocks.session.api.rq.CreateSessionRq;
+import com.github.simple_mocks.session.api.rq.GetSessionAttributeNamesRq;
+import com.github.simple_mocks.session.api.rq.GetSessionAttributeRq;
+import com.github.simple_mocks.session.api.rq.UpdateSessionRq;
 import jakarta.annotation.Nonnull;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
@@ -42,41 +42,29 @@ public interface SessionService {
      * In case if a section doesn't exist when null should be returned.<br/>
      * If session isn't found when "NOT_EXISTS" should be thrown.
      *
-     * @param sessionId session identifier
-     * @param section   section in session
+     * @param rq get attributes names request
      * @return attribute names
      */
-    Set<String> getAttributeNames(@Nonnull SessionId sessionId,
-                                  @Nonnull String section);
+    Set<String> getAttributeNames(@Nonnull GetSessionAttributeNamesRq rq);
 
     /**
      * Get attribute value from session.<br/>
      * In case if a section or attribute is not found, null should be returned.
      * If session isn't found when "NOT_EXISTS" should be thrown.
      *
-     * @param sessionId session identifier
-     * @param section   section in session
-     * @param attribute attribute code
-     * @param <T>       type of attribute
+     * @param rq  get request
+     * @param <T> type of attribute
      * @return attribute value or null
      */
-    <T extends Serializable> T getAttribute(@Nonnull SessionId sessionId,
-                                            @Nonnull String section,
-                                            @Nonnull String attribute);
+    <T extends Serializable> T getAttribute(@Nonnull GetSessionAttributeRq rq);
 
     /**
      * Create session with passed data.<br/>
      *
-     * @param sections    shared sections data
-     * @param ownerType   session owner type
-     * @param ownerId     session owner id
-     * @param permissions list of user permissions
+     * @param rq creation request
      * @return new session identifier
      */
-    SessionId create(@Nonnull Map<String, Map<String, Serializable>> sections,
-                     @Nonnull SessionOwnerType ownerType,
-                     @Nonnull String ownerId,
-                     @Nonnull List<String> permissions);
+    SessionId create(@Nonnull CreateSessionRq rq);
 
     /**
      * Update session by applying passed actions.<br/>
@@ -84,10 +72,8 @@ public interface SessionService {
      * If session isn't found when "NOT_EXISTS" should be thrown.<br/>
      * If any of the sections are readonly when "READONLY" should be thrown.
      *
-     * @param sessionId         session id
-     * @param modificationQuery query to modify session
+     * @param rq update request
      * @return new session identifier
      */
-    SessionId update(@Nonnull SessionId sessionId,
-                     @Nonnull ModificationQuery modificationQuery);
+    SessionId update(@Nonnull UpdateSessionRq rq);
 }
