@@ -1,4 +1,4 @@
-package com.github.simple_mocks.session.api.dto;
+package com.github.simplemocks.session.api.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

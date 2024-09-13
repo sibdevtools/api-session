@@ -1,15 +1,14 @@
-package com.github.simple_mocks.session.api.service;
+package com.github.simplemocks.session.api.service;
 
-import com.github.simple_mocks.session.api.dto.Session;
-import com.github.simple_mocks.session.api.dto.SessionId;
-import com.github.simple_mocks.session.api.rq.CreateSessionRq;
-import com.github.simple_mocks.session.api.rq.GetSessionAttributeNamesRq;
-import com.github.simple_mocks.session.api.rq.GetSessionAttributeRq;
-import com.github.simple_mocks.session.api.rq.UpdateSessionRq;
+import com.github.simplemocks.session.api.dto.SessionId;
+import com.github.simplemocks.session.api.rq.CreateSessionRq;
+import com.github.simplemocks.session.api.rq.GetSessionAttributeNamesRq;
+import com.github.simplemocks.session.api.rq.GetSessionAttributeRq;
+import com.github.simplemocks.session.api.rq.UpdateSessionRq;
+import com.github.simplemocks.session.api.rs.*;
 import jakarta.annotation.Nonnull;
 
 import java.io.Serializable;
-import java.util.Set;
 
 /**
  * Session service, provide ability to get, create, update session.
@@ -24,18 +23,20 @@ public interface SessionService {
      * In case if session doesn't exist when null should be returned.
      *
      * @param sessionId session identifier
-     * @return session or null
+     * @return session response
      */
-    Session get(@Nonnull SessionId sessionId);
+    @Nonnull
+    GetSessionRs get(@Nonnull SessionId sessionId);
 
     /**
      * Get the last version of session common info.<br/>
      * In case if session doesn't exist when null should be returned.
      *
      * @param uid session uid
-     * @return session or null
+     * @return session response
      */
-    Session get(@Nonnull String uid);
+    @Nonnull
+    GetSessionRs get(@Nonnull String uid);
 
     /**
      * Get attribute names from session's section.<br/>
@@ -45,7 +46,8 @@ public interface SessionService {
      * @param rq get attributes names request
      * @return attribute names
      */
-    Set<String> getAttributeNames(@Nonnull GetSessionAttributeNamesRq rq);
+    @Nonnull
+    GetAttributeNamesRs getAttributeNames(@Nonnull GetSessionAttributeNamesRq rq);
 
     /**
      * Get attribute value from session.<br/>
@@ -54,9 +56,10 @@ public interface SessionService {
      *
      * @param rq  get request
      * @param <T> type of attribute
-     * @return attribute value or null
+     * @return get attribute response
      */
-    <T extends Serializable> T getAttribute(@Nonnull GetSessionAttributeRq rq);
+    @Nonnull
+    <T extends Serializable> GetSessionAttributeRs<T> getAttribute(@Nonnull GetSessionAttributeRq rq);
 
     /**
      * Create session with passed data.<br/>
@@ -64,7 +67,8 @@ public interface SessionService {
      * @param rq creation request
      * @return new session identifier
      */
-    SessionId create(@Nonnull CreateSessionRq rq);
+    @Nonnull
+    CreateSessionRs create(@Nonnull CreateSessionRq rq);
 
     /**
      * Update session by applying passed actions.<br/>
@@ -75,5 +79,6 @@ public interface SessionService {
      * @param rq update request
      * @return new session identifier
      */
-    SessionId update(@Nonnull UpdateSessionRq rq);
+    @Nonnull
+    UpdateSessionRs update(@Nonnull UpdateSessionRq rq);
 }

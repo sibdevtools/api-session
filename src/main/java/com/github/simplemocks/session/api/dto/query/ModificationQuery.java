@@ -1,6 +1,6 @@
-package com.github.simple_mocks.session.api.dto.query;
+package com.github.simplemocks.session.api.dto.query;
 
-import com.github.simple_mocks.session.api.dto.query.action.Action;
+import com.github.simplemocks.session.api.dto.query.action.Action;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.github.simple_mocks.session.api.rq;
+package com.github.simplemocks.session.api.rq;
 
-import com.github.simple_mocks.session.api.dto.SessionId;
+import com.github.simplemocks.session.api.dto.SessionId;
 import jakarta.annotation.Nonnull;
 import lombok.Builder;
 

@@ -1,5 +1,6 @@
-package com.github.simple_mocks.session.api.dto;
+package com.github.simplemocks.session.api.dto;
 
+import java.io.Serializable;
 import java.util.Set;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Set;
  * @author sibmaks
  * @since 0.0.1
  */
-public interface Session {
+public interface Session extends Serializable {
     /**
      * Session identifier
      *
