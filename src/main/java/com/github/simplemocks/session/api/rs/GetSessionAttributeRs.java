@@ -1,6 +1,8 @@
 package com.github.simplemocks.session.api.rs;
 
+import com.github.simplemocks.common.api.dto.ErrorRsDto;
 import com.github.simplemocks.common.api.rs.StandardBodyRs;
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 
 import java.io.Serializable;
@@ -20,5 +22,14 @@ public class GetSessionAttributeRs<T extends Serializable> extends StandardBodyR
      */
     public GetSessionAttributeRs(@Nullable T attribute) {
         super(attribute);
+    }
+
+    /**
+     * Construct get attribute response with error
+     *
+     * @param error happened error
+     */
+    public GetSessionAttributeRs(@Nonnull ErrorRsDto error) {
+        super(error);
     }
 }

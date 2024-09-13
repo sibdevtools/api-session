@@ -1,5 +1,6 @@
 package com.github.simplemocks.session.api.rs;
 
+import com.github.simplemocks.common.api.dto.ErrorRsDto;
 import com.github.simplemocks.common.api.rs.StandardBodyRs;
 import com.github.simplemocks.session.api.dto.SessionId;
 import jakarta.annotation.Nonnull;
@@ -19,5 +20,14 @@ public class UpdateSessionRs extends StandardBodyRs<SessionId> {
      */
     public UpdateSessionRs(@Nonnull SessionId sessionId) {
         super(sessionId);
+    }
+
+    /**
+     * Construct update session response with error
+     *
+     * @param error happened error
+     */
+    public UpdateSessionRs(@Nonnull ErrorRsDto error) {
+        super(error);
     }
 }

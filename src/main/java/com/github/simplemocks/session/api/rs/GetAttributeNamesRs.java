@@ -1,6 +1,8 @@
 package com.github.simplemocks.session.api.rs;
 
+import com.github.simplemocks.common.api.dto.ErrorRsDto;
 import com.github.simplemocks.common.api.rs.StandardBodyRs;
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 
 import java.util.HashSet;
@@ -26,5 +28,14 @@ public class GetAttributeNamesRs extends StandardBodyRs<HashSet<String>> {
                         .map(HashSet::new)
                         .orElseGet(HashSet::new)
         );
+    }
+
+    /**
+     * Construct get attribute names response with error
+     *
+     * @param error happened error
+     */
+    public GetAttributeNamesRs(@Nonnull ErrorRsDto error) {
+        super(error);
     }
 }
