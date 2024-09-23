@@ -1,11 +1,11 @@
-package com.github.simplemocks.session.api;
+package com.github.sibdevtools.session.api;
 
-import com.github.simplemocks.session.api.dto.query.action.Action;
-import com.github.simplemocks.session.api.dto.query.action.AddAction;
-import com.github.simplemocks.session.api.dto.query.action.DeleteAction;
-import com.github.simplemocks.session.api.dto.query.action.SetAction;
-import com.github.simplemocks.session.api.dto.query.impl.ModificationQueryImpl;
-import com.github.simplemocks.session.api.dto.query.ModificationQuery;
+import com.github.sibdevtools.session.api.dto.query.ModificationQuery;
+import com.github.sibdevtools.session.api.dto.query.action.Action;
+import com.github.sibdevtools.session.api.dto.query.action.AddAction;
+import com.github.sibdevtools.session.api.dto.query.action.DeleteAction;
+import com.github.sibdevtools.session.api.dto.query.action.SetAction;
+import com.github.sibdevtools.session.api.dto.query.impl.ModificationQueryImpl;
 import jakarta.annotation.Nonnull;
 
 import java.io.Serializable;

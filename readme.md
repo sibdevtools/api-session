@@ -1,4 +1,4 @@
-# Simple Mock - Session Service API
+# SibDevTools - Session Service API
 
 ## To build
 

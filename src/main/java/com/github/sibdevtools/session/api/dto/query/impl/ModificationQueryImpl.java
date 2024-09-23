@@ -1,7 +1,7 @@
-package com.github.simplemocks.session.api.dto.query.impl;
+package com.github.sibdevtools.session.api.dto.query.impl;
 
-import com.github.simplemocks.session.api.dto.query.ModificationQuery;
-import com.github.simplemocks.session.api.dto.query.action.Action;
+import com.github.sibdevtools.session.api.dto.query.ModificationQuery;
+import com.github.sibdevtools.session.api.dto.query.action.Action;
 
 import java.util.List;
 

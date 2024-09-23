@@ -1,6 +1,6 @@
-package com.github.simplemocks.session.api.rq;
+package com.github.sibdevtools.session.api.rq;
 
-import com.github.simplemocks.session.api.dto.SessionOwnerType;
+import com.github.sibdevtools.session.api.dto.SessionOwnerType;
 import jakarta.annotation.Nonnull;
 import lombok.Builder;
 

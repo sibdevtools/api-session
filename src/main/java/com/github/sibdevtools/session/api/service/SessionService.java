@@ -1,11 +1,12 @@
-package com.github.simplemocks.session.api.service;
+package com.github.sibdevtools.session.api.service;
 
-import com.github.simplemocks.session.api.dto.SessionId;
-import com.github.simplemocks.session.api.rq.CreateSessionRq;
-import com.github.simplemocks.session.api.rq.GetSessionAttributeNamesRq;
-import com.github.simplemocks.session.api.rq.GetSessionAttributeRq;
-import com.github.simplemocks.session.api.rq.UpdateSessionRq;
-import com.github.simplemocks.session.api.rs.*;
+import com.github.sibdevtools.session.api.dto.SessionId;
+import com.github.sibdevtools.session.api.rs.*;
+import com.github.sibdevtools.session.api.rq.CreateSessionRq;
+import com.github.sibdevtools.session.api.rq.GetSessionAttributeNamesRq;
+import com.github.sibdevtools.session.api.rq.GetSessionAttributeRq;
+import com.github.sibdevtools.session.api.rq.UpdateSessionRq;
+import com.github.sibdevtools.session.api.rs.*;
 import jakarta.annotation.Nonnull;
 
 import java.io.Serializable;

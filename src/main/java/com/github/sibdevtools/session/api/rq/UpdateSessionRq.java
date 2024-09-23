@@ -1,7 +1,7 @@
-package com.github.simplemocks.session.api.rq;
+package com.github.sibdevtools.session.api.rq;
 
-import com.github.simplemocks.session.api.dto.SessionId;
-import com.github.simplemocks.session.api.dto.query.ModificationQuery;
+import com.github.sibdevtools.session.api.dto.SessionId;
+import com.github.sibdevtools.session.api.dto.query.ModificationQuery;
 import jakarta.annotation.Nonnull;
 import lombok.Builder;
 

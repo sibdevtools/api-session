@@ -1,4 +1,4 @@
-package com.github.simplemocks.session.api.dto.query.action;
+package com.github.sibdevtools.session.api.dto.query.action;
 
 import lombok.Getter;
 
